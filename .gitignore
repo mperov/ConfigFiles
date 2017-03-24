@@ -1,0 +1,8 @@
+# expect
+!.gitignore
+!.vimrc
+!.gitconfig
+
+# all files
+*
+*/
