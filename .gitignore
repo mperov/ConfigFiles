@@ -2,6 +2,7 @@
 !.gitignore
 !.vimrc
 !.gitconfig
+!init-configs
 
 # all files
 *

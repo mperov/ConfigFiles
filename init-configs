@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ -f "~/.vimrc"]; then
+    mv ~/.vimrc ~/.vimrc_saved
+fi
+if [ -f "~/.gitconfig"]; then
+    mv ~/.gitconfig ~/.gitconfig_saved
+fi
+
+ln -s `pwd`/.vimrc ~/.vimrc
+ln -s `pwd`/.gitconfig ~/.gitconfig
