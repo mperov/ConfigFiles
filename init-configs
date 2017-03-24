@@ -1,10 +1,13 @@
 #!/bin/sh
 
-if [ -f "~/.vimrc"]; then
+if [ -f "~/.vimrc" ] || [ ! -e "~/.vimrc" ]; then
     mv ~/.vimrc ~/.vimrc_saved
+    echo "Your old `pwd`/.vimrc moved to `pwd`/.vimrc_save"
 fi
-if [ -f "~/.gitconfig"]; then
+
+if [ -f "~/.gitconfig" ] || [ ! -e "~/.gitconfig" ]; then
     mv ~/.gitconfig ~/.gitconfig_saved
+    echo "Your old `pwd`/.gitconfig moved to `pwd`/.gitconfig_saved"
 fi
 
 ln -s `pwd`/.vimrc ~/.vimrc
