@@ -1,5 +1,14 @@
 #!/bin/sh
 
+NAME=$1
+SURNAME=$2
+EMAIL=$3
+
+if test -z $SURNAME || test -z $NAME || test -z  $EMAIL; then
+    echo "Usage: ./init-configs your_surname your_surname your_e-mail"
+    exit 1;
+fi
+
 if [ -f "~/.vimrc" ] || [ ! -e "~/.vimrc" ]; then
     mv ~/.vimrc ~/.vimrc_saved
     echo "Your old `pwd`/.vimrc moved to `pwd`/.vimrc_save"
@@ -12,3 +21,6 @@ fi
 
 ln -s `pwd`/.vimrc ~/.vimrc
 ln -s `pwd`/.gitconfig ~/.gitconfig
+
+git config --global user.name "$SURNAME $NAME"
+git config --global user.email $EMAIL
