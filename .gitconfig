@@ -1,7 +1,3 @@
-[user]
-    name = Perov Maxim
-    email = coder@frtk.ru
-
 [alias]
     co = checkout
     ci = commit
