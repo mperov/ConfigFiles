@@ -1,17 +1,18 @@
 [user]
-	name = PMaxim
-	email = coder@frtk.ru
+    name = Perov Maxim
+    email = coder@frtk.ru
 
 [alias]
-  co = checkout
-  ci = commit
-  st = status
-  br = branch
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  type = cat-file -t
-  dump = cat-file -p
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:\"%C(yellow)%h%Creset | %ad %C(red)(%ar)%Creset | %C(bold blue)[%an]%Creset - %s%d\" --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
 
 [color]
-  ui = true
+    ui = true
+
 [credential]
-	helper = cache --timeout 7200
+    helper = cache --timeout 7200
