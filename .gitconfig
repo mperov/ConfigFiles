@@ -16,3 +16,6 @@
 
 [credential]
     helper = cache --timeout 7200
+
+[http]
+    postBuffer = 1048576000
